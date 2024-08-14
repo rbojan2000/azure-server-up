@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "infrastructure"
+version = "0.1.0"
+description = ""
+authors = ["Bojan Radovic <rbojan2000@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+azure-mgmt-resource = "^23.1.1"
+azure-mgmt-compute = "^32.0.0"
+azure-mgmt-network = "^26.0.0"
+azure-identity = "^1.17.1"
+paramiko = "^3.4.0"
+click = "^8.1.7"
+dynaconf = "^3.2.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

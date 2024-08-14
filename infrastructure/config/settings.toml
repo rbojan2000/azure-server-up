@@ -1,0 +1,36 @@
+[default.azure]
+resource_group_name = "rg-azure-vm"
+location = "westeurope"
+subscription_id = "11c1b11c-1c1-11dd-b123-c12ad223dfb1"
+    [default.azure.vnet]
+        name = "python-example-vnet"
+        address_prefixes="10.0.0.0/16"
+    [default.azure.subnet]
+        name = "python-example-subnet"
+        address_prefix = "10.0.0.0/24"
+    [default.azure.public.ip]
+        name = "python-example-ip"
+        config_name = "python-example-ip-config"
+        sku = "Standard"
+        allocation_method = "Static"
+    [default.azure.public.nic]
+        name = "python-example-nic"
+    [default.azure.vm]
+        name = "ExampleVM"
+        size = "Standard_D2s_v3"
+        [default.azure.vm.image]
+            sku = "16.04.0-LTS"
+            version = "latest"
+        [default.azure.vm.credentials]
+            username = "user"
+            password = "ChangePa$$w0rd24"
+    [default.azure.nsg]
+        name = "python-example-nsg"
+    [container.registry]
+        server = ""
+        username = ""
+        password = ""
+        image = ""
+[default.ssh.key.path]
+private = ""
+public = ""
